@@ -20,6 +20,7 @@ namespace KringeGame.Creatures
         }, ConsoleColor.Red)
         {
             Stats.Actions.Add(new LightAttackTarget());
+            Stats.Actions.Add(new Thunder_bolt());
         }
     }
 }

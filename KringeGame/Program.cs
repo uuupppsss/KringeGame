@@ -21,21 +21,20 @@ namespace KringeGame
 
             while (!player.IsDead)
             {
-                Room room = new Room(player);
-                room.RunBattle();
                 if (player.IsDead)
                 {
                     break;
                 }
+                Room room = new Room(player);
+                room.RunBattle();
 
-                Console.WriteLine("Вы хотите продолжить? (y/n)");
+                Console.WriteLine("Вы хотите продолжить? введите y чтобы продолжить");
                 if (Console.ReadLine()?.ToLower() != "y")
                 {
                     break;
                 }
             }
 
-            Console.WriteLine("Конец игры.");
         }
     }
 }

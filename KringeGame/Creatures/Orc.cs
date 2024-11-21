@@ -20,7 +20,6 @@ namespace KringeGame.Creatures
         }, ConsoleColor.DarkYellow)
         {
             Stats.Actions.Add(new LightAttackTarget());
-            Stats.Actions.Add(new MultiAttackTarget());
         }
     }
 }

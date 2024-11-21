@@ -26,12 +26,9 @@ namespace KringeGame.Creatures
 
         public override void RunAction(Room room)
         {
-            // Используем логику, аналогичную логике игрока
             Console.ForegroundColor = Color;
             Console.WriteLine($"Текущие HP: {Stats.CurrentHP}/{Stats.MaxHP}");
             Stats.PrintActions();
-
-            // Выбор действия врага будет случайным
             var action = Stats.Actions[new Random().Next(Stats.Actions.Count)];
             action.Run(this, room);
 

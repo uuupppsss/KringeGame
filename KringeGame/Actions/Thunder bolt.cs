@@ -7,13 +7,12 @@ using System.Threading.Tasks;
 
 namespace KringeGame.Actions
 {
-    public class LightAttackTarget : AttackOneTarget
+    public class Thunder_bolt:AttackOneTarget
     {
-        public LightAttackTarget()
+        public Thunder_bolt()
         {
-            Title = "Легкая атака";
+            Title = "Thunder bolt";
         }
-
         public override void Run(Creature performer, Room room)
         {
             if (performer is Player)
@@ -27,7 +26,7 @@ namespace KringeGame.Actions
                 if (int.TryParse(Console.ReadLine(), out int choice) && choice > 0 && choice <= room.Enemies.Count)
                 {
                     var target = room.Enemies[choice - 1];
-                    int damage = new Random().Next(1, 6) + performer.Stats.Damage;
+                    int damage = new Random().Next(5, 10) + performer.Stats.Damage;
 
                     // Проверка на статус комнаты "Туман"
                     if (room.Status == RoomStatus.Fog && new Random().NextDouble() < 0.3)
@@ -47,7 +46,7 @@ namespace KringeGame.Actions
             else 
             {
                 var target = room.Player;
-                int damage = new Random().Next(1, 6) + performer.Stats.Damage;
+                int damage = new Random().Next(1, 5) + performer.Stats.Damage;
 
                 if (room.Status == RoomStatus.Fog && new Random().NextDouble() < 0.3)
                 {

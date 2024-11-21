@@ -16,7 +16,6 @@ namespace KringeGame.Actions
 
         public override void Run(Creature performer, Room room)
         {
-            // Логика использования предмета
             Console.WriteLine($"{performer.Stats.Name} использует предмет!");
         }
     }

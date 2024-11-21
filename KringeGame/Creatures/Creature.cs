@@ -38,7 +38,7 @@ namespace KringeGame.Creatures
 
         public void RandomSpeed()
         {
-            Stats.Speed = new Random().Next(1, 11);
+            Stats.Speed = new Random().Next(1, 15);
         }
     }
 }

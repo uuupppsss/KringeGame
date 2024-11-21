@@ -63,10 +63,8 @@ namespace KringeGame.Creatures
             {
                 Console.WriteLine("Поздравляем! Вы очистили комнату!");
             }
-            else
-            {
-                Console.WriteLine("Игра окончена.");
-            }
+            else Console.WriteLine("Игра окончена.");
+
         }
     }
 

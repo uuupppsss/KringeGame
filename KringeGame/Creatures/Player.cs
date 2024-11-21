@@ -8,7 +8,7 @@ namespace KringeGame.Creatures
 {
     public class Player : Creature
     {
-        public string Name { get; private set; }
+        public string Name { get; set; }
 
         public Player(string name, CreatureClass stats) : base(stats, ConsoleColor.Green)
         {

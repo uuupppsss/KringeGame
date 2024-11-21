@@ -7,11 +7,11 @@ using System.Threading.Tasks;
 
 namespace KringeGame.Actions
 {
-    public class MultiAttackTarget : AttackAllTargets
+    public class Laguna_Blade:AttackAllTargets
     {
-        public MultiAttackTarget()
+        public Laguna_Blade()
         {
-            Title = "Атака по группе";
+            Title = "Laguna Blade";
         }
 
         public override void Run(Creature performer, Room room)
@@ -31,7 +31,7 @@ namespace KringeGame.Actions
 
             foreach (var target in targets)
             {
-                int damage = new Random().Next(1, 4) + performer.Stats.Damage / 2;
+                int damage = new Random().Next(10,20) + performer.Stats.Damage;
                 target.TakeDamage(damage);
                 Console.WriteLine($"{performer.Stats.Name} наносит {damage} урона {target.Stats.Name}.");
             }

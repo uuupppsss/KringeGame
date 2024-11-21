@@ -21,6 +21,7 @@ namespace KringeGame.Creatures
         {
             int effectiveDamage = Math.Max(damage - Armor, 0);
             CurrentHP -= effectiveDamage;
+            if (CurrentHP <0) CurrentHP = 0;
             Console.WriteLine($"{Name} получил {effectiveDamage} урона. Текущие HP: {CurrentHP}/{MaxHP}");
         }
 

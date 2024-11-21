@@ -20,18 +20,15 @@ namespace KringeGame.Creatures
             Speed = 12
         }, ConsoleColor.Cyan)
         {
-            Stats.Actions.Add(new LightAttackTarget());
-            Stats.Actions.Add(new MultiAttackTarget());
+            Stats.Actions.Add(new Thunder_bolt());
+            Stats.Actions.Add(new Laguna_Blade());
         }
 
         public override void RunAction(Room room)
-        {
-            // Используем логику, аналогичную логике игрока
+        {  
             Console.ForegroundColor = Color;
             Console.WriteLine($"Текущие HP: {Stats.CurrentHP}/{Stats.MaxHP}");
             Stats.PrintActions();
-
-            // Выбор действия врага будет случайным
             var action = Stats.Actions[new Random().Next(Stats.Actions.Count)];
             action.Run(this, room);
 
